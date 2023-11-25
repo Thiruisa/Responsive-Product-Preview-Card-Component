@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --family-1: 'Montserrat', sans-serif;
+    --family-2: 'Fraunces', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: car(--family-1);
+    background-color: var(--cream);
+    padding: 50px;
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*****************************
+Media Query for Large Screens
+******************************/
+
+@media only screen and (min-width: 375px) {
+    .container {
+        width: 50%;
+        height: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .img-container {
+        width: 50%;
+        height: 50vh;
+        background-image: url(./images/image-product-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 0 0 10px;
+    }
+    
+    .card-container {
+        width: 50%;
+        height: 50vh;
+        padding: 2.5rem;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 0 10px 10px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .sub-heading {
+        text-transform: uppercase;
+        color: var(--dark-grayish-blue);
+        letter-spacing: 5px;
+        font-family: var(--family-1);
+    }
+    
+    .heading {
+        font-family: var(--family-2);
+        padding: 1.5rem 1.5rem 1.5rem 0;
+        line-height: 2.5rem;
+        font-size: 40px;
+    }
+    
+    .text {
+        font-family: var(--family-1);
+        padding: 1.5rem 1.5rem 1.5rem 0;
+        line-height: 1.5rem;
+        color: var(--dark-grayish-blue);
+        font-size: 15px;
+    }
+    
+    .price {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        font-family: var(--family-2);
+    }
+    
+    .current-price {
+        color: hsl(158, 36%, 37%);
+        font-size: 32px;
+    }
+    
+    .previous-price {
+        text-decoration: line-through;
+        margin-left: 1rem;
+        font-family: var(--family-1);
+        color: var(--dark-grayish-blue);
+    }
+    
+    button {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: hsl(158, 36%, 37%);
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: hsl(158, 35%, 22%);
+    }
+    
+    button span {
+        margin-right: .5rem;
+    }
+}
+
+
+/*****************************
+Media Query for small Screens
+******************************/
+
+@media only screen and (max-width: 1440px) {
+    .container {
+        width: 100%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .img-container {
+        width: 60%;
+        height: 50vh;
+        background-image: url(./images/image-product-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-container {
+        width: 60%;
+        height: 50vh;
+        padding: 2.5rem;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
